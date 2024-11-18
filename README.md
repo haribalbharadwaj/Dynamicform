@@ -34,7 +34,11 @@ Installation
 2.Install dependencies : npm install
 
 3.Run the application locally:npm run dev
+
+
 4.Run tests (optional): npm run test
+
+
 5.Deploy on Vercel: Deploy the app using Vercel
 
 ##### Example JSON Schemas  
@@ -118,7 +122,8 @@ Installation
   ]
 }
 
-4. Event Registration form
+3. Event Registration form
+
 {
   "formTitle": "Event Registration",
   "fields": [
