@@ -77,20 +77,21 @@ const JsonEditor: React.FC<JsonEditorProps> = ({ jsonData, onEdit }) => {
   };
 
   // Adjust textarea style for better fit in MainInterface and responsiveness
-  const textareaStyle = {
-    width: "100%", // Take full width of the parent container
-    height: "400px", // Set a default height for desktop
+  const textareaStyle: React.CSSProperties = {
+    width: "100%",
+    height: "400px",
     border: "1px solid #ccc",
     borderRadius: "8px",
     padding: "10px",
     fontFamily: "monospace",
     fontSize: "14px",
-    resize: "vertical", // Allow users to resize vertically only
+    resize: "vertical", // This is valid now
     color: "black",
     backgroundColor: "#fff",
-    boxSizing: "border-box", // Ensure padding is included in the width and height
+    boxSizing: "border-box",
     transition: "all 0.3s ease-in-out",
   };
+  
 
   const mobileStyle = `
     @media (max-width: 768px) {

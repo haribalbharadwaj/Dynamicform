@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormGenerator from "../src/FormGenerator";
 import JsonEditor from "../src/JsonEditor";
 
+// MainInterface component
 const MainInterface = () => {
   const [jsonSchema, setJsonSchema] = useState({
     formTitle: "Form Heading",
@@ -38,7 +39,8 @@ const MainInterface = () => {
     setJsonSchema(updatedJson);
   };
 
-  const containerStyle = {
+  // Explicitly cast styles to React.CSSProperties type
+  const containerStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     width: "100%",
@@ -49,29 +51,29 @@ const MainInterface = () => {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   };
 
-  const headerStyle = {
+  const headerStyle: React.CSSProperties = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     padding: "1rem",
     borderBottom: `2px solid ${darkMode ? "#444" : "#ddd"}`,
     width: "100%",
-    boxSizing: "border-box",
+    boxSizing: "border-box", // Correct type assignment
   };
 
-  const headingStyle = {
+  const headingStyle: React.CSSProperties = {
     fontSize: "1.8rem",
     fontWeight: 700,
     letterSpacing: "2px",
-    textTransform: "uppercase",
+    textTransform: "uppercase", // Ensure this is a valid TextTransform value
   };
 
-  const letterStyle = (color: string) => ({
+  const letterStyle = (color: string): React.CSSProperties => ({
     color: color,
     padding: "0 3px",
   });
 
-  const darkModeToggleStyle = {
+  const darkModeToggleStyle: React.CSSProperties = {
     fontSize: "1.5rem",
     cursor: "pointer",
     backgroundColor: darkMode ? "#444" : "#fff",
@@ -82,7 +84,7 @@ const MainInterface = () => {
     transition: "background-color 0.3s, color 0.3s",
   };
 
-  const contentStyle = {
+  const contentStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -91,14 +93,14 @@ const MainInterface = () => {
     boxSizing: "border-box",
   };
 
-  const editorStyle = {
+  const editorStyle: React.CSSProperties = {
     width: "50%",
     padding: "1rem",
     marginBottom: "2rem",
     borderRadius: "8px",
-    left:'25%',
-    top:'20%',
-    position:'absolute',
+    left: "25%",
+    top: "20%",
+    position: "absolute", // Valid position value
     backgroundColor: darkMode ? "#2A2A2A" : "#fff",
     boxShadow: darkMode
       ? "0 4px 10px rgba(0, 0, 0, 0.7)"
@@ -106,11 +108,11 @@ const MainInterface = () => {
     transition: "background-color 0.3s, box-shadow 0.3s",
   };
 
-  const generatorStyle = {
+  const generatorStyle: React.CSSProperties = {
     width: "50%",
-    left:'25%',
-    top:'90%',
-    position:'absolute',
+    left: "25%",
+    top: "90%",
+    position: "absolute", // Valid position value
     padding: "1rem",
     marginBottom: "2rem",
     borderRadius: "8px",

@@ -1,0 +1,1 @@
+{"root":["./playwright.confg.ts","./vite.config.ts","./src/app.tsx","./src/formgenerator.tsx","./src/jsoneditor.tsx","./src/maininterface.tsx","./src/main.tsx","./src/vite-env.d.ts","./tests/jest/form.test.ts","./tests/playwright/form.test.ts"],"version":"5.6.3"}

@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",  // Enable JSX support for React
-    // Other options you may already have:
     "target": "es5",
     "module": "esnext",
+    "moduleResolution": "node",
+    "types": ["@playwright/test", "vite/client"],  // Corrected the syntax
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
