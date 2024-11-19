@@ -31,7 +31,7 @@ interface FormGeneratorProps {
 }
 
 const FormGenerator: React.FC<FormGeneratorProps> = ({ schema }) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors },reset } = useForm();
   const [jsonData, setJsonData] = useState<string | null>(null);
 
   const onSubmit = (data: any) => {
@@ -53,6 +53,8 @@ const FormGenerator: React.FC<FormGeneratorProps> = ({ schema }) => {
     link.download = "form_submission.json";
     link.click();
     URL.revokeObjectURL(url);
+
+    reset();
   };
 
   const handleCopy = () => {
