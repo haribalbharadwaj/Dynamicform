@@ -35,10 +35,16 @@ const FormGenerator: React.FC<FormGeneratorProps> = ({ schema }) => {
   const [jsonData, setJsonData] = useState<string | null>(null);
 
   const onSubmit = (data: any) => {
-    const json = JSON.stringify(data, null, 2);
+    const fullSubmission = {
+      formTitle: schema.formTitle,  // Include form title
+      formDescription: schema.formDescription,  // Include form description
+      formData: data,  // Include the rest of the form data
+    };
+  
+    const json = JSON.stringify(fullSubmission, null, 2);
     setJsonData(json);
-
-    console.log(data);
+  
+    console.log(fullSubmission);
 
     const blob = new Blob([json], { type: "application/json" });
     const url = URL.createObjectURL(blob);

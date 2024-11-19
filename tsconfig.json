@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "target": "ESNext",
+    "jsx": "react-jsx",  // Enable JSX support for React
+    // Other options you may already have:
+    "allowImportingTsExtensions": true,
+    "target": "es5",
+    "module": "esnext",
+    "strict": true,
     "esModuleInterop": true,
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*", "tests/**/*"]
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }
