@@ -4,7 +4,7 @@ import path from 'path';
 
 test('should validate form JSON generation and download', async ({ page }) => {
   // Navigate to the form page (replace with your Vite app URL if needed)
-  await page.goto('http://localhost:5173/');
+  await page.goto('https://dynamicform-ztw9.vercel.app/');
 
   // Fill out the form fields (ensure the input names match your form's structure)
   await page.fill('input[name="name"]', 'John Doe');

@@ -43,7 +43,7 @@ test('should validate form JSON generation and download', function (_a) { return
         switch (_c.label) {
             case 0: 
             // Navigate to the form page (replace with your Vite app URL if needed)
-            return [4 /*yield*/, page.goto('http://localhost:5173/')];
+            return [4 /*yield*/, page.goto('https://dynamicform-ztw9.vercel.app/')];
             case 1:
                 // Navigate to the form page (replace with your Vite app URL if needed)
                 _c.sent();
